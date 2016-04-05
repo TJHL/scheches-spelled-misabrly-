@@ -58,18 +58,19 @@ void draw() {
     yspeed= 5;
     sound.trigger();
   }
-  if (y==25) {
-    bottomplayerscore=bottomplayerscore+.5;
-    println(bottomplayerscore);
-  }
+
+  
   textSize(30);
   text((int)bottomplayerscore, 10, 450);
-  if (y==475) {
-    toplayerscore=toplayerscore+.5;
+  if (y==475&&yspeed==-5) {
+    toplayerscore=toplayerscore+1;
     println(toplayerscore);
   }
    textSize(30);
-  text((int)toplayerscore, 10, 450);
+  text((int)toplayerscore, 10, 70);
+  if (y==25&&yspeed==5) {
+    bottomplayerscore=bottomplayerscore+1;
+    println(bottomplayerscore);}
 
 }
 boolean intersects(int ballX, int ballY, int paddleX, int paddleY, int paddleLength) {
