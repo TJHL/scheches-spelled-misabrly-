@@ -37,7 +37,7 @@ void draw() {
     ball.yspeed= -5;
     sound.trigger();
   }
-  if (intersects(ball.x, ball.y, keyX, 125, 100)) {
+  if (intersects(ball.x, ball.y, top.x, 125, 100)) {
     ball.yspeed= 5;
     sound.trigger();
   }
